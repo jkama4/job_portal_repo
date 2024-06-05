@@ -53,19 +53,27 @@ def get_mars_rovers(rover_name: str, page: int, api_key: str, sol=None, earth_da
 
         all_rovers[f"rover{counter}"] = rover
         counter += 1
-        
-
-    print(all_rovers)
 
     return all_rovers
 
-rover_name = "curiosity"
+rover_name = "opportunity"
 sol = 1000
 page = 1
 
 rovers = get_mars_rovers(rover_name=rover_name, sol=sol, api_key=api_key, page=page)
 
-rovers: List[str] = [
+if rovers:
+    for rover in rovers:
+        print(f"Image info:")
+        print(f"- image: {rovers[rover]['img']}")
+        print(f"- landing date: {rovers[rover]['landing_date']}")
+        print(f"- launch date: {rovers[rover]['launch_date']}")
+        print(f"- date of image taken: {rovers[rover]['img_date']}")
+        print("")
+else:
+    print("No data available")
+
+rovers_types: List[str] = [
     "curiosity",
     "opportunity",
     "spirit",
