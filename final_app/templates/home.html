@@ -3,11 +3,21 @@
 {% block title %}Home Page{% endblock %}
 
 {% block main_content %}
-    <h2>Home Page</h2>
-    <p
-    class="para1">This is our Home Page</p>
+    <h2>Job Application Portal</h2>
+    <p class="para1">This is our Home Page</p>
     <p>This is where your main content for the homepage goes.</p>
 
-    <button
-    class="listen">Click here</button>
+    <div class="search-bar">
+        <input type="text" id="job-search" placeholder="Search for jobs...">
+        <button id="search-btn">Search</button>
+    </div>
+
+    <div class="job-listings">
+        <h2>Job Listings</h2>
+        <div id="jobs-container">
+            <!-- Job postings will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <button class="listen">Click here</button>
 {% endblock %}
