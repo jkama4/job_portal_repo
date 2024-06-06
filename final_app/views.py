@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from requests import HttpResponse, HttpRequest
+from django.http import HttpResponse, HttpRequest
 # from .api import get_mars_rovers
 
 def home(request):
