@@ -3,24 +3,40 @@
 {% block title %}Home Page{% endblock %}
 
 {% block main_content %}
-    <h2>Welcome to JobPortal!</h2>
-    <p class="para1">Your dream career is just a few clicks away. 
-        At JobPortal, we connect talented individuals with top employers across various industries. 
-        Whether you're looking to kickstart your career or seeking new opportunities, 
-        our platform provides the resources and tools to help you succeed. Explore a vast array of job listings, 
-        customize your job search, and apply with ease. Join the JobPortal community today and take the first step 
-        towards your future success!</p>
-
-    <div class="search-bar">
-        <input type="text" id="job-search" placeholder="Search for jobs...">
-        <button id="search-btn">Search</button>
-    </div>
-
-    <div class="job-listings">
-        <h2>Job Listings</h2>
-        <div id="jobs-container">
-            <!-- Job postings will be dynamically inserted here -->
+<section class="container">
+    <section class="slogan">
+        <h1 class="slogan-text">Discover a job that suits you!</h1>
+    </section>
+    <section class="filter-bar">
+        <div class="city-filter">
+            <select name="cities" id="city">
+                <option value="">Amsterdam</option>
+                <option value="">Paris</option>
+                <option value="">London</option>
+            </select>
         </div>
-    </div>
-
+        <div class="job-filter">
+            <select name="jobs" id="job">
+                <option value="">Engineer</option>
+                <option value="">Cashier</option>
+                <option value="">Pilot</option>
+            </select>
+        </div>
+        <div class="country-filter">
+            <select name="countries" id="country">
+                <option value="">Netherlands</option>
+                <option value="">France</option>
+                <option value="">England</option>
+            </select>
+        </div>
+        <search id="search-bar">
+            <!-- <form action="./search/"> -->
+              <input type="search" id="search-input" name="q" placeholder="search . . ." />
+              <button class="search-button" type="submit"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 21L16.65 16.65M11 6C13.7614 6 16 8.23858 16 11M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></button>
+            <!-- </form> -->
+        </search>
+    </section>
+</section>
 {% endblock %}
