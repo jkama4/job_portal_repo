@@ -71,7 +71,6 @@ body {
 .container h1 {
   font-weight: bold;
   font-size: 4em;
-  
 }
 
 .filter-bar {
@@ -92,7 +91,7 @@ select {
   border-radius: 0;
 }
 
-#city {
+#job {
   border-radius: 10px 0px 0px 10px;
 }
 
@@ -117,6 +116,25 @@ select {
 #search-bar {
   display: flex;
   align-items: center;
+}
+
+.home-text {
+  width: 40%;
+  font-size: 18px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 50px;
+}
+
+.card {
+  background-color: white;
+  width: 20%;
+  border-radius: 10px 10px 10px 10px;
+
 }
 
 
