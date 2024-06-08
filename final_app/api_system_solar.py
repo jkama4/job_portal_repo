@@ -17,6 +17,6 @@ for body in data['bodies']:
     print(f"Gravity: {body.get('gravity', 'Unknown')} m/s²")
     print(f"Density: {body.get('density', 'Unknown')} g/cm³")
     print(f"Dimension: {body['dimension']}")
-    print(f"Mean temperature: {body['avgTemp', 'Unknown']} K")
+    print(f"Mean temperature: {body.get('avgTemp', 'Unknown')} K")
     print()
 
