@@ -5,6 +5,11 @@ from django.http import HttpResponse, HttpRequest
 def home(request):
     return render(request, 'home.html')
 
+def results(request):
+    query = request.GET.get('q', '')
+    context = {'q': query}
+    return render(request, 'results.html', context)
+
 ### View for job application
 
 
