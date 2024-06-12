@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <header class="header">
-    <a href="#" class="logo">Job<strong>Portal</strong></a>
+    <a href="{% url 'home' %}" class="logo">Job<strong>Portal</strong></a>
     
     <nav class="nav-bar">
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contact</a>
     </nav>
 </header>
 <body>
