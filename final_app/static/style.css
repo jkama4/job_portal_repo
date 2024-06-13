@@ -5,7 +5,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-<<<<<<< HEAD
 h2 {
   font-family: Monaco;
   text-align: center;
@@ -28,16 +27,6 @@ h4 {
   line-height: 1.7;
 }
 
-=======
->>>>>>> jayden_branch
-body {
-  min-height: 100vh;
-  background-color: #CAE8FF;
-  background-size: cover;
-  background-position: center;
-}
-
-<<<<<<< HEAD
 .about_title {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -124,8 +113,13 @@ body {
   margin-left: 8%;
 }
 
-=======
->>>>>>> jayden_branch
+body {
+  min-height: 100vh;
+  background-color: #CAE8FF;
+  background-size: cover;
+  background-position: center;
+}
+
 .header a {
   font-weight: lighter;
 }
@@ -295,9 +289,6 @@ select {
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
-<<<<<<< HEAD
-}
-=======
 }
 
 #job-card {
@@ -321,8 +312,17 @@ select {
   margin: 30px;
 }
 
+#image_homepage {
+  width: 300px;
+  height: 300px;
+  overflow: clip;
+  border: 2px solid;
+  display: flex;
+  position: relative;
+}
 
-
-
-
->>>>>>> jayden_branch
+#image_homepage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
