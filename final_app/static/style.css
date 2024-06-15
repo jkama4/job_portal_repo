@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-}
+} 
 
 h2 {
   font-family: Monaco;
@@ -68,21 +68,25 @@ h4 {
 .about_square_title {
   text-align: left;
   margin-left: 8%;
+  color: #050A30;
 }
 
 .about_square_title_2 {
   text-align: left;
   margin-left: 10%;
+  color: #050A30;
 }
 
 .about_square_title_3 {
   text-align: left;
   margin-left: 8%;
+  color: #050A30;
 }
 
 .about_square_subtitle {
   text-align: left;
   margin-left: 8%;
+  color: #050A30;
 }
 
 .about_square_subtitle_2 {
@@ -93,6 +97,7 @@ h4 {
 .about_square_subtitle_3 {
   text-align: left;
   margin-left: 8%;
+  color: #050A30;
 }
 
 .about_square_text {
@@ -118,11 +123,11 @@ body {
   background-color: #CAE8FF;
   background-size: cover;
   background-position: center;
-}
+} 
 
 .header a {
   font-weight: lighter;
-}
+} 
 
 .header {
   width: 100%;
@@ -132,7 +137,7 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-}
+} 
 
 .logo {
   display: flex;
@@ -141,7 +146,7 @@ body {
   color: rgb(43, 59, 88);
   text-decoration: none;
   font-weight: 700;
-}
+} 
 
 .nav-bar a {
   position: relative;
@@ -150,7 +155,7 @@ body {
   font-weight: 500;
   text-decoration: none;
   margin-left: 40px;
-}
+} 
 
 .nav-bar a::before {
   content: '';
@@ -161,88 +166,106 @@ body {
   height: 2px;
   background: rgb(43, 59, 88);
   transition: 0.3s;
-}
+} 
 
 .nav-bar a:hover::before {
-  width: 100%;
-}
+  width: 100%; 
+} 
 
 .container {
   margin-left: 6em;
   margin-top: 3em;
-}
+} 
 
 .slogan {
+  display: flex;
+  justify-content: space-around; /* Align items to the left and right */
+  align-items: center; 
+  width: 80%; /* Adjust width to fit within the container */
+  background-color: #CAE8FF;
+  border-radius: 10px;
+  margin-top: -30px;
+}
+
+.slogan-text {
+  background-color: #CAE8FF;
   padding: 40px;
-  width: 50%;
-  background-color: #80b8e3;
   border-radius: 10px 10px 10px 10px;
 }
 
 .container h1 {
   font-weight: bold;
   font-size: 4em;
-}
+  color: #050A30;
+} 
 
 .filter-bar {
   display: flex;
   flex-direction: row;
   margin: 2.5em 0;
   align-items: center;
-}
+  margin-top: -0.3em;
+  border: 2px #050A30;
+} 
 
 select, input {
   padding: 15px 20px;
   border: 2px solid;
   background-color: inherit;
   outline: none;
-}
+} 
 
 select {
   border-radius: 0;
-}
+} 
 
 #job {
   border-radius: 10px 0px 0px 10px;
-}
+} 
 
 #search-input {
   border-radius: 0px 10px 10px 0px;
-}
+  margin-bottom: 10.5px;
+  border: 2px solid #050A30;
+  background-color: #CAE8FF;
+} 
 
 .search-button {
   margin-left: 15px;
   padding: 10px;
   border-radius: 10px;
   background-color: #fff;
-  box-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 4px #050A30;
 }
 
 #search-button:hover {
   background-color: rgb(43, 59, 88);
   color: #fff;  
+  margin-bottom: 10px;
 
 }
 
 #search-bar {
   display: flex;
   align-items: center;
-}
+} 
 
 .home-text {
   padding: 30px;
   width: 40%;
   font-size: 18px;
-  background-color: #80b8e3;
+  background-color: #CAE8FF;
   border-radius: 4px 4px 4px 4px;
 
-}
+} 
 
 .card-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 30px;
+  margin: 10px;
+  margin-top: 4em;
+  margin-left: -5em;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -286,13 +309,17 @@ select {
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
+  background-color: #2b3b58;
   color: white;
   transform: rotateY(180deg);
 }
+.flip-card-back div { 
+  margin-top: 2em;
+
+}
 
 #job-card {
-  background-color: #80b8e3;
+  background-color: #CAE8FF;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -311,18 +338,169 @@ select {
   align-items: flex-start;
   margin: 30px;
 }
-
-#image_homepage {
-  width: 300px;
-  height: 300px;
-  overflow: clip;
-  border: 2px solid;
-  display: flex;
-  position: relative;
+#jobicon {
+  width: 38%;
+  height: auto;
+  margin-top: 1.65em;
 }
 
-#image_homepage img {
+#jobicon2 {
+  width: 38%;
+  height: auto;
+  margin-top: 1.65em;
+}
+
+#jobicon3 {
+  width: 38%;
+  height: auto;
+  margin-top: 1.65em;
+}
+
+#homepage_img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#homepage_img img {
+  width: 520px;
+  height: auto;
+  margin-right: -11em;
+  margin-bottom: -4em;
+}
+
+.contact__title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact__title h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact__title p {
+  font-size: 1rem;
+  color: #050A30;
+}
+
+.contact__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.contact__image {
+  display: flex;
+  width: 450px;
+  height: auto;
+}
+
+.contact__info {
+  font-size: 1rem;
+  color: #050A30;
+}
+
+.contact__info ul {
+  list-style: none;
+  padding: 0;
+  margin-right: 220px;
+}
+
+.contact__info li {
+  margin-bottom: 0.5rem;
+}
+
+.contact__info a {
+  color: #050A30;
+  text-decoration: none;
+}
+
+.contact__info a:hover {
+  text-decoration: underline;
+}
+
+.results_title_text {
+  text-align: left;
+  font-weight: 500;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.job-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 3px;
+  margin-bottom: 1px;
+}
+
+#job-card {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+  padding: 25px;
+  width: 235px;
+  height: 350px;
+  margin-top: 70px;
+  border-radius: 10px;
+}
+
+.job-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  align-self: center
+}
+
+#job-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  align-self: center
+}
+
+.job-card-title {
+  margin-top: -10px;
+  align-self: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(55, 70, 99);
+  font-weight: bold;
+}
+
+.job-card-company {
+  font-size: 11px;
+  align-self: center;
+  margin-top: -33px;
+  color: rgb(173, 173, 173);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.job-card-location {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(55, 70, 99);
+  margin-top: 5px;
+}
+
+.job-card-description {
+  margin-top: -30px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(55, 70, 99);
+}
+
+.view-job-button {
+  background-color: rgb(244, 245, 245);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.job-view-job {
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: rgb(117, 128, 151);
 }
