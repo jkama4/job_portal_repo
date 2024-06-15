@@ -5,7 +5,7 @@ const searchInput = document.getElementById('search-input');
 function updateSearchInput() {
     console.log("Job selected: ", jobSelect.value); // Debug log
 
-    if (jobSelect.value === "--job title--" || jobSelect.value === "") {
+    if (jobSelect.value === "Job Title" || jobSelect.value === "") {
         console.log("Setting placeholder and value for default selection"); // Debug log
         searchInput.value = "";
         searchInput.placeholder = "Search for a Job";
