@@ -1,14 +1,26 @@
 {% extends "base.html" %}
 
 {% block title %}
-Home Page
+Contact Page
 {% endblock %}
 
 {% block main_content %}
 <section class="container">
-  <section class="contact__title">
-    <h2 class="contact_title_text">CONTACT</h2>
-    <h3 class="contact_subtitle">Reach out to us anytime</h3>
-  </section>
+    <section class="contact__title">
+        <h2>Have a question on your mind?</h2>
+        <p>We’re here to help and answer any questions you might have!</p>
+    </section>
+
+    <section class="contact__content">
+        <img src="/static/goodimage.png" alt="Contact Illustration" class="contact__image">
+        <div class="contact__info">
+            <p> <strong> Email us at:</strong> </p>
+            <ul>
+                <li><a href="mailto:g.kudzmanaite@student.vu.nl">g.kudzmanaite@student.vu.nl</a></li>
+                <li><a href="mailto:j.kashanimaleki@student.vu.nl">j.kashanimaleki@student.vu.nl</a></li>
+                <li><a href="mailto:s.chan3@student.vu.nl">s.chan3@student.vu.nl</a></li>
+            </ul>
+        </div>
+    </section>
 </section>
 {% endblock %}
