@@ -2,7 +2,7 @@ import requests
 from typing import Dict, List, Any
 
 def google_job_api(query: str, location: str, max_results: int = 5) -> List[Dict[str, str]]:
-    api_key = "c48b63afb7252beb68424ace28f904566269c665a6de862413691490f55f636d"
+    api_key = "866adaf9f3d141423a14b4223599732c5ba7c1da3586b9efc42bc276003e0d59"
     jobs: List[Dict[str, str]] = []
     results_per_page = 5
     pages = (max_results // results_per_page) + 1
