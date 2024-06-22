@@ -10,116 +10,36 @@
     </section>
 
     <section class="job-card-container">
-        <div id="job-card">
-            <img id="job-logo" src="logo.png" alt="Picture of logo"/>
-            <p class="job-card-title">Job function title</p>
-            <p class="job-card-company"> Company Name</p>
-            <p class="job-card-location">	•	  Location</p>
-            <p class="job-card-description">	•	  Description</p>
-            <a class="view-job-button" href="{% url 'home' %}">
-                <p class="job-view-job"> VIEW JOB</p>
-            </a>
-        </div>
-        <div id="job-card">
-            <img id="job-logo" src="logo.png" alt="Picture of logo"/>
-            <p class="job-card-title">Job function title</p>
-            <p class="job-card-company"> Company Name</p>
-            <p class="job-card-location">	•	  Location</p>
-            <p class="job-card-description">	•	  Description</p>
-            <a class="view-job-button" href="{% url 'home' %}">
-                <p class="job-view-job"> VIEW JOB</p>
-            </a>
-        </div>
-        <div id="job-card">
-            <img id="job-logo" src="logo.png" alt="Picture of logo"/>
-            <p class="job-card-title">Job function title</p>
-            <p class="job-card-company"> Company Name</p>
-            <p class="job-card-location">	•	  Location</p>
-            <p class="job-card-description">	•	  Description</p>
-            <a class="view-job-button" href="">
-                <p class="job-view-job"> VIEW JOB</p>
-            </a>
-        </div>
-        <div id="job-card">
-            <img id="job-logo" src="logo.png" alt="Picture of logo"/>
-            <p class="job-card-title">Job function title</p>
-            <p class="job-card-company"> Company Name</p>
-            <p class="job-card-location">	•	  Location</p>
-            <p class="job-card-description">	•	  Description</p>
-            <a class="view-job-button" href="">
-                <p class="job-view-job"> VIEW JOB</p>
-            </a>
-        </div>
-        <div id="job-card">
-            <img id="job-logo" src="logo.png" alt="Picture of logo"/>
-            <p class="job-card-title">Job function title</p>
-            <p class="job-card-company"> Company Name</p>
-            <p class="job-card-location">	•	  Location</p>
-            <p class="job-card-description">	•	  Description</p>
-            <a class="view-job-button" href="">
-                <p class="job-view-job"> VIEW JOB</p>
-            </a>
-        </div>
-        <div id="job-card">
-            <img id="job-logo" src="logo.png" alt="Picture of logo"/>
-            <p class="job-card-title">Job function title</p>
-            <p class="job-card-company"> Company Name</p>
-            <p class="job-card-location">	•	  Location</p>
-            <p class="job-card-description">	•	  Description</p>
-            <a class="view-job-button" href="">
-                <p class="job-view-job"> VIEW JOB</p>
-            </a>
-        </div>
-        <div id="job-card">
-            <img id="job-logo" src="logo.png" alt="Picture of logo"/>
-            <p class="job-card-title">Job function title</p>
-            <p class="job-card-company"> Company Name</p>
-            <p class="job-card-location">	•	  Location</p>
-            <p class="job-card-description">	•	  Description</p>
-            <a class="view-job-button" href="">
-                <p class="job-view-job"> VIEW JOB</p>
-            </a>
-        </div>
-        <div id="job-card">
-            <img id="job-logo" src="logo.png" alt="Picture of logo"/>
-            <p class="job-card-title">Job function title</p>
-            <p class="job-card-company"> Company Name</p>
-            <p class="job-card-location">	•	  Location</p>
-            <p class="job-card-description">	•	  Description</p>
-            <a class="view-job-button" href="">
-                <p class="job-view-job"> VIEW JOB</p>
-            </a>
-        </div>
-        <div id="job-card">
-            <img id="job-logo" src="logo.png" alt="Picture of logo"/>
-            <p class="job-card-title">Job function title</p>
-            <p class="job-card-company"> Company Name</p>
-            <p class="job-card-location">	•	  Location</p>
-            <p class="job-card-description">	•	  Description</p>
-            <a class="view-job-button" href="">
-                <p class="job-view-job"> VIEW JOB</p>
-            </a>
-        </div>
-        <div id="job-card">
-            <img id="job-logo" src="logo.png" alt="Picture of logo"/>
-            <p class="job-card-title">Job function title</p>
-            <p class="job-card-company"> Company Name</p>
-            <p class="job-card-location">	•	  Location</p>
-            <p class="job-card-description">	•	  Description</p>
-            <a class="view-job-button" href="">
-                <p class="job-view-job"> VIEW JOB</p>
-            </a>
-        </div>
-        <div id="job-card">
-            <img id="job-logo" src="logo.png" alt="Picture of logo"/>
-            <p class="job-card-title">Job function title</p>
-            <p class="job-card-company"> Company Name</p>
-            <p class="job-card-location">	•	  Location</p>
-            <p class="job-card-description">	•	  Description</p>
-            <a class="view-job-button" href="">
-                <p class="job-view-job"> VIEW JOB</p>
-            </a>
-        </div>
+        {% if jobs %}
+            {% for job in jobs %}
+                <div id="job-card">
+                        <img id="job-logo" src={{ job.image }} alt="Picture of logo"/>
+                        <p class="job-card-title">{{ job.title }}</p>
+                        <br>
+                        <p class="job-card-company">{{ job.company_name }}</p>
+                        <br>
+                        <div class="job-description-container">
+                            <p class="job-card-description">	•	  {{ job.location }}</p>
+                            {% if job.salary %}
+                            <p class="job-card-description"> • Salary: {{ job.salary }}</p>
+                            {% endif %}
+                            {% if job.schedule_type %}
+                            <p class="job-card-description"> • Job type: {{ job.schedule_type }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="button-container">
+                            <a class="view-job-button" href="{% url 'home' %}">
+                                <p class="job-view-job" href="{{ job.link }}">VIEW JOB</p>
+                            </a>
+                            <a class="like-job-button" href="{% url 'home' %}">
+                            <img src="/static/favourites_img.jpg" alt="Like button" class="like_button">
+                            </a>
+                        </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p><strong>No jobs found</strong></p>
+        {% endif %}           
     </section> 
 </section>
 
