@@ -62,10 +62,3 @@ def error(request: HttpRequest) -> HttpResponse:
     return: renders the data
     """
     return render(request, "error.html")
-
-def favourites(request: HttpRequest) -> HttpResponse:
-    """View for favourites.html
-    param: request (HttpRequest) : Makes a request to present the html
-    return: renders the data
-    """
-    return render(request, "favourites.html")
