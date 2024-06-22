@@ -10,5 +10,4 @@ urlpatterns: List[Any] = [
     path("contact/", views.contact, name="contact"),
     path("results/", views.results, name="results"),
     path("error/", views.error, name="error"),
-    path("favourites/", views.favourites, name="favourites"),
 ]
