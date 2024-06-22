@@ -8,10 +8,10 @@ def google_job_api(query: str, location: str, max_results: int = 5) -> List[Dict
     param: max_results (int): The maximum number of job listings to fetch. Defaults to 5.
     return: a list of jobs, where each job is a dictionary
     """
-    api_key = "866adaf9f3d141423a14b4223599732c5ba7c1da3586b9efc42bc276003e0d59"
+    api_key: str = "866adaf9f3d141423a14b4223599732c5ba7c1da3586b9efc42bc276003e0d59"
     jobs: List[Dict[str, str]] = []
-    results_per_page = 5
-    pages = (max_results // results_per_page) + 1
+    results_per_page: int = 5
+    pages: int = (max_results // results_per_page) + 1
     
     for page in range(pages):
         params: Dict[str, Any] = {
@@ -26,11 +26,11 @@ def google_job_api(query: str, location: str, max_results: int = 5) -> List[Dict
         }
 
         response = requests.get(url='https://serpapi.com/search', params=params)
-        data = response.json()
-        results = data.get("jobs_results", [])
+        data: List[Dict[str,str]] = response.json()
+        results: Dict[str,str] = data.get("jobs_results", [])
 
         for result in results:
-            job = {}
+            job: Dict[str,str] = {}
             job["title"] = result.get("title")
             job["company_name"] = result.get("company_name")
             job["location"] = result.get("location", None)
@@ -56,7 +56,7 @@ def convert_to_hourly(salary_str: str) -> float:
         param: salary_str (str): The yearly salary as a string, which can be a float or an integer.
         return: The equivalent hourly salary, rounded to two decimal places.
     """
-    salary_float = float(salary_str) if "." in salary_str else int(salary_str)
+    salary_float: float = float(salary_str) if "." in salary_str else int(salary_str)
     return round(salary_float / 2080, 2)
 
 
@@ -72,8 +72,8 @@ def process_salary(salary: str, schedule_type: str) -> str:
     if "a year" not in salary:
         return f"€ {salary}"
 
-    yearly_salary = salary.replace(" a year", "").replace("K", "000").replace(",", "")
-    min_max_salary = []
+    yearly_salary: str = salary.replace(" a year", "").replace("K", "000").replace(",", "")
+    min_max_salary: List[str] = []
 
     if "-" in yearly_salary:
         min_max_salary = yearly_salary.split("-")
