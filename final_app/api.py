@@ -2,6 +2,12 @@ import requests
 from typing import Dict, List, Any
 
 def google_job_api(query: str, location: str, max_results: int = 5) -> List[Dict[str, str]]:
+    """Function that reaches out to SerpAPI using an API key to gather data (JSON) from Google Jobs.
+    param: query (str): The search query given by the user.
+    param: location (str): The location given by the user.
+    param: max_results (int): The maximum number of job listings to fetch. Defaults to 5.
+    return: a list of jobs, where each job is a dictionary
+    """
     api_key = "866adaf9f3d141423a14b4223599732c5ba7c1da3586b9efc42bc276003e0d59"
     jobs: List[Dict[str, str]] = []
     results_per_page = 5
@@ -45,12 +51,21 @@ def google_job_api(query: str, location: str, max_results: int = 5) -> List[Dict
 
     return jobs
 
-def convert_to_hourly(salary_str):
+def convert_to_hourly(salary_str: str) -> float:
+    """ Converts a yearly salary string to an hourly rate.
+        param: salary_str (str): The yearly salary as a string, which can be a float or an integer.
+        return: The equivalent hourly salary, rounded to two decimal places.
+    """
     salary_float = float(salary_str) if "." in salary_str else int(salary_str)
     return round(salary_float / 2080, 2)
 
 
 def process_salary(salary: str, schedule_type: str) -> str:
+    """ Processes the salary string and converts it to an hourly rate if applicable.
+        param: salary (str): The salary string, which may include yearly salary information.
+        param: schedule_type (str): The schedule type of the job (e.g., full-time, part-time).
+        return: The processed salary string as an hourly rate if the job is full-time and the salary is given in yearly terms, otherwise returns None.
+    """
     if schedule_type != "Full-time":
         return None
 
