@@ -1,0 +1,10 @@
+Django>=3.2,<4.0
+djangorestframework>=3.12.0,<4.0
+requests>=2.25.0
+gunicorn>=20.0.4  # If you're deploying with Gunicorn
+psycopg2>=2.8  # If you're using PostgreSQL
+mysqlclient>=2.0.3  # If you're using MySQL
+pillow>=8.0.1  # For image handling
+django-cors-headers>=3.5.0  # For handling CORS if needed
+django-environ>=0.4.5  # For environment variable management
+django-filter>=2.4.0  # For filtering in Django Rest Framework
