@@ -28,8 +28,8 @@
                             {% endif %}
                         </div>
                         <div class="button-container">
-                            <a class="view-job-button" href="{% url 'home' %}">
-                                <p class="job-view-job" href="{{ job.link }}">VIEW JOB</p>
+                            <a class="view-job-button" href="{{ job.link }}">
+                                <p class="job-view-job">VIEW JOB</p>
                             </a>
                             <a class="like-job-button" href="{% url 'home' %}">
                             <img src="/static/favourites_img.jpg" alt="Like button" class="like_button">
