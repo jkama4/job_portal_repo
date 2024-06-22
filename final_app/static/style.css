@@ -33,14 +33,16 @@ h4 {
 }
 
 .about_text {
-  width: 130ch;
+  width: 60%;
   text-align: center;
-  margin-left: 19.5%
+  margin-left: 19.5%;
 }
 
-.about_square_1 {
+.about_square_1 { 
+  display: static;
+  text-align: center;
   margin-top: 60px;
-  margin-left: 250px;
+  margin-left: 450px;
   width: 700px;
   height: 400px;
   background-color: #def0fc;
@@ -48,8 +50,10 @@ h4 {
 }
 
 .about_square_2 {
+  display: static;
+  text-align: center;
   margin-top: -100px;
-  margin-left: 580px;
+  margin-left: 780px;
   width: 500px;
   height: 380px;
   background-color: #c1def2;
@@ -57,8 +61,10 @@ h4 {
 }
 
 .about_square_3 {
+  display: static;
+  text-align: center;
   margin-top: -60px;
-  margin-left: 200px;
+  margin-left: 450px;
   width: 620px;
   height: 370px;
   background-color: #edf1df;
@@ -179,9 +185,9 @@ body {
 
 .slogan {
   display: flex;
-  justify-content: space-around; /* Align items to the left and right */
+  justify-content: space-around; 
   align-items: center; 
-  width: 80%; /* Adjust width to fit within the container */
+  width: 80%; 
   background-color: #CAE8FF;
   border-radius: 10px;
   margin-top: -30px;
@@ -213,14 +219,6 @@ select, input {
   border: 2px solid;
   background-color: inherit;
   outline: none;
-} 
-
-select {
-  border-radius: 0;
-} 
-
-#job {
-  border-radius: 10px 0px 0px 10px;
 } 
 
 #search-input {
@@ -268,7 +266,6 @@ select {
   margin-left: -5em;
 }
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -276,7 +273,6 @@ select {
   perspective: 800px;
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -286,12 +282,10 @@ select {
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -301,13 +295,11 @@ select {
   border-radius: 10px 10px 10px 10px;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background-color: #fff;
   color: black;
 }
 
-/* Style the back side */
 .flip-card-back {
   background-color: #2b3b58;
   color: white;
@@ -326,18 +318,18 @@ select {
   text-align: left;
   padding: 55px;
   width: 100%;
-  height: 100%;
+  height: auto;
   border-radius: 10px 10px 10px 10px;
   margin: 10px;
 }
 
 .job-card-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 15px;
+  margin-bottom: 1px;
 }
+
 #jobicon {
   width: 38%;
   height: auto;
@@ -426,12 +418,13 @@ select {
   text-align: left;
   font-weight: 500;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(43, 59, 88);
 }
 
 .job-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 3px;
+  gap: 1em;
   margin-bottom: 1px;
 }
 
@@ -439,13 +432,14 @@ select {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   text-align: left;
-  padding: 25px;
-  width: 235px;
-  height: 350px;
+  padding: 20px;
+  width: 90%;
+  height: 380px;
   margin-top: 70px;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .job-picture {
@@ -463,19 +457,19 @@ select {
 }
 
 .job-card-title {
-  margin-top: -10px;
   align-self: center;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: rgb(55, 70, 99);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #374663;
   font-weight: bold;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .job-card-company {
   font-size: 11px;
-  align-self: center;
-  margin-top: -33px;
   color: rgb(173, 173, 173);
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
 }
 
 .job-card-location {
@@ -485,22 +479,62 @@ select {
 }
 
 .job-card-description {
-  margin-top: -30px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: rgb(55, 70, 99);
+  margin-top: 10px;
+}
+
+.job-description-container {
+  margin-bottom: auto;
 }
 
 .view-job-button {
   background-color: rgb(244, 245, 245);
-  padding: 10px;
   border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  width: 160px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 25px;
+  margin-bottom: 15px;
 }
 
 .job-view-job {
-  text-align: center;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   letter-spacing: 2px;
   font-weight: bold;
   color: rgb(117, 128, 151);
+  text-align: center;
 }
+
+.job-card-description {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(55, 70, 99);
+  margin-top: 10px;
+}
+
+#notfound__image {
+  display: flex;
+  align-items: center;
+  margin-left: 280px;
+  width: 60%;
+  height: auto;
+}
+
+.like-job-button {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.like_button {
+  width: 30px;
+  height: 30px;
+}
+
