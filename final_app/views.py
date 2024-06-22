@@ -37,7 +37,7 @@ def results(request: HttpRequest) -> HttpResponse:
         return redirect(reverse("home"))
 
     try:
-        jobs = google_job_api(query=query, location=location)
+        jobs: List[Dict[str,str]] = google_job_api(query=query, location=location)
     except KeyError:
         return redirect('error')
     
