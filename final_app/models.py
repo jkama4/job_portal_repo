@@ -1,6 +1,7 @@
 # myapp/models.py
 from django.db import models
 from django.contrib.auth.models import User
+from typing import Optional
 
 class Job(models.Model):
     """ A model representing a job listing.
