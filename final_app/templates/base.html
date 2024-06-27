@@ -1,10 +1,10 @@
-{% load static %}
+{% load final_app %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="{% final_app 'static/scripts/script.js' %}" defer></script>
+    <script src="{% final_app '/static/scripts/script.js' %}" defer></script>
     <title>{% block title %} Our Job App {% endblock %}</title>
     <link rel="stylesheet" href="{% final_app '/static/style.css' %}">
 </head>
