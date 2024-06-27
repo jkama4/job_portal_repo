@@ -31,13 +31,15 @@ def google_job_api(query: str, location: str, max_results: int = 5) -> List[Dict
         results: Dict[str,str] = data.get("jobs_results", [])
 
         for result in results:
-            job: Dict[str,str] = {}
-            job["title"] = result.get("title")
-            job["company_name"] = result.get("company_name")
-            job["location"] = result.get("location", None)
-            job["link"] = result.get("related_links", [{}])[0].get("link", None)
-            job["image"] = result.get("thumbnail", None)
-            job["schedule_type"] = result.get("detected_extensions", {}).get("schedule_type")
+            job: Dict[str,str] = {
+                "title" : result.get("title"),
+                "company_name" : result.get("company_name"),
+                "location" : result.get("location", None),
+                "link" : result.get("related_links", [{}])[0].get("link", None),
+                "image" : result.get("thumbnail", None),
+                "schedule_type" : result.get("detected_extensions", {}).get("schedule_type"),
+                "salary" : None,
+            }
 
             salary = result.get("detected_extensions", {}).get("salary")
             if salary:
@@ -49,7 +51,7 @@ def google_job_api(query: str, location: str, max_results: int = 5) -> List[Dict
         
         if not results:
             break
-
+            
     return jobs
 
 def convert_to_hourly(salary_str: str) -> float:
