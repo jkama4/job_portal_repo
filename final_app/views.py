@@ -1,14 +1,10 @@
 from django.shortcuts import render, redirect
-from typing import Dict, List
+from typing import Dict, List, Any
 from django.http import HttpResponse, HttpRequest
 from .api import google_job_api
 from django.urls import reverse
-from typing import List, Dict, Any
 from .models import Job
 from .forms import JobForm
-from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.decorators import login_required
-from .models import Job
 
 def home(request: HttpRequest) -> HttpResponse:
     """View for home.html
