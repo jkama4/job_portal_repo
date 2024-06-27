@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="{% static '/final_app/scripts/script.js' %}" defer></script>
+    <script src="{% final_app 'static/scripts/script.js' %}" defer></script>
     <title>{% block title %} Our Job App {% endblock %}</title>
-    <link rel="stylesheet" href="{% static '/final_app/style.css' %}">
+    <link rel="stylesheet" href="{% final_app '/static/style.css' %}">
 </head>
 <header class="header">
     <a href="{% url 'home' %}" class="logo">Job<strong>Portal</strong></a>
