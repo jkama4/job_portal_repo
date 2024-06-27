@@ -6,14 +6,14 @@
 
 <section class="container">
     <section class="results_title">
-        <h3 class="results_title_text">Job matches for {{ q }}</h1>
+        <h3 class="results_title_text">Job matches for {{ q }} {{ location }}</h1>
     </section>
 
     <section class="job-card-container">
         {% if jobs %}
             {% for job in jobs %}
                 <div id="job-card">
-                        <img id="job-logo" src={{ job.image }} alt="Picture of logo"/>
+                        <img id="job-logo" src="{{ job.image }}" alt="Picture of logo"/>
                         <p class="job-card-title">{{ job.title }}</p>
                         <br>
                         <p class="job-card-company">{{ job.company_name }}</p>
