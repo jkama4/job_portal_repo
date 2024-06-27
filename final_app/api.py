@@ -12,6 +12,7 @@ def google_job_api(query: str, location: str, max_results: int = 5) -> List[Dict
     jobs: List[Dict[str, str]] = []
     results_per_page: int = 5
     pages: int = (max_results // results_per_page) + 1
+    location = location if location else "Amsterdam"
     
     for page in range(pages):
         params: Dict[str, Any] = {
