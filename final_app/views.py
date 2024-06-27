@@ -34,6 +34,8 @@ def results(request: HttpRequest) -> HttpResponse:
 
     try:
         jobs: List[Dict[str,str]] = google_job_api(query=query, location=location)
+        if not jobs:
+            return redirect('error')
     except KeyError:
         return redirect('error')
     
