@@ -1,15 +1,11 @@
 # JobPortal
 
-![JobPortal Frontend Homepage](/static/frontend_homepage.png)
-![JobPortal Frontend Aboutpage](/static/frontend_aboutpage.png)
-![JobPortal Frontend Contactpage](/static/frontend_contactpage.png)
-
 ## Brief description of the project
 The job search process can often be daunting and time-consuming, with job seekers sifting through countless listings to find positions that match their skills and preferences. Recognizing this challenge, we identified a pressing need for a more efficient and user-centric job search solution. This motivation drove us to develop JobPortal, a platform designed to address these pain points and streamline the job search experience. JobPortal aims to provide a platform that is easy to navigate, where users can efficiently tailor their search results based on job type, location, and salary range. This personalized approach enhances the user experience and increases the likelihood of finding suitable job matches.
 
 ## Frontend mockup
 
-![JobPortal Frontend Mockup](/static/frontend_mockup.jpg)
+![JobPortal Frontend Mockup](final_app/static/frontend_homepage.png)
 
 ## Team members
 - Sayuri Chan, sch110
