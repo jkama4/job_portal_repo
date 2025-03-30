@@ -7,11 +7,6 @@ The job search process can often be daunting and time-consuming, with job seeker
 
 ![JobPortal Frontend Mockup](final_app/static/frontend_homepage.png)
 
-## Team members
-- Sayuri Chan, sch110
-- Greta Kudzmanaite, gku205
-- Jayden Kashani Maleki, jka103
-
 ## Installation details
 1. **Clone the repository:**
 
